@@ -13,14 +13,15 @@ public class Selection {
                     minimo = j;
                 } 
             }
+            System.out.println("Pasada: " + i + "|");
             if (minimo != i) {
                 cambios++;
                 int aux = arreglo[i];
                 arreglo[i] = arreglo[minimo];
                 arreglo[minimo] = aux;
+                System.out.println(" Cambio " + arreglo[minimo] + "<->" + arreglo[i]);
             }
-            System.out.println("Cambios: " + cambios);
-            System.out.println("Comparaciones: "+ comparaciones);
+
         }
 
         System.out.println("Cambios: " + cambios);
