@@ -1,17 +1,32 @@
 public class Bubble {
 
-    public int[] sort(int[] arreglo){
+    public void sort(int[] arreglo){
+        int cambios = 0;
+        int comparaciones = 0;
         for(int i =0; i < arreglo.length; i++){
             // forj
-            for(int j = 1 ; j < arreglo.length; j++)
+            System.out.println("Pasada: " + i);
+            boolean combinaciones = false;
+            for(int j = 1 ; j < arreglo.length -i; j++){
                 //Comparacion if
+                comparaciones++;
                 if(arreglo [j - 1]> arreglo[j]){
                     //Intercambio
+                    combinaciones = true;
+                    cambios++;
                     int aux = arreglo[j-1];
                     arreglo[j-1] = arreglo[j];
                     arreglo[j] = aux;
                 }
+            }
+            if (!combinaciones) {
+                break;
+            }
+            System.out.println("Cambios: " + cambios);
+            System.out.println("Comparaciones: "+ comparaciones);
         }
-        return null;
+        System.out.println("Cambios: " + cambios);
+        System.out.println("Comparaciones: "+ comparaciones);
+        
     }
 }

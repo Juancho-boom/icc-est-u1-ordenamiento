@@ -1,7 +1,7 @@
 public class App {
   
     public static void main(String[] args) throws Exception {
-        int[] original = {5,3,4,1,2};
+        int[] original = {5,6,4,1,2,3};
         int[] b = original.clone(); // b es una copia del original
         int[] c = original; // c es una referencia al original
 
@@ -15,12 +15,21 @@ public class App {
         printArreglo(b);
         bubble.sort(b);
         printArreglo(b);
+
+        System.out.println("\n");
+        System.out.println("----Selection----");
+        Selection seletion = new Selection();
+        printArreglo(c);
+        seletion.sort(c);
+        printArreglo(c);
+    
     }
 
+   
     public static void printArreglo(int[] arr){
         for(int i =0 ; i < arr.length; i++)
             System.out.print(arr[i] + " - ");
-        System.out.println();
+            System.out.println();
         
     }
 }
