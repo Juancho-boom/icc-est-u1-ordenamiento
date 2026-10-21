@@ -4,6 +4,7 @@ public class App {
         int[] original = {5,6,4,1,2,3};
         int[] b = original.clone(); // b es una copia del original
         int[] c = original; // c es una referencia al original
+        int[] d = original.clone();
 
         // Usar el metodo del archivo(clase) Bubble 
         // Instanciar el archivo bubble
@@ -22,7 +23,14 @@ public class App {
         printArreglo(c);
         seletion.sort(c);
         printArreglo(c);
-    
+        
+
+        System.out.println("\n");
+        System.out.println("----Insetion----");
+        Insertion insertion = new Insertion();
+        printArreglo(d);
+        insertion.sort(d);
+        printArreglo(d);
     }
 
    
