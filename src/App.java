@@ -23,7 +23,7 @@ public class App {
         printArreglo(c);
         seletion.sort(c);
         printArreglo(c);
-        
+        //s
 
         System.out.println("\n");
         System.out.println("----Insetion----");
