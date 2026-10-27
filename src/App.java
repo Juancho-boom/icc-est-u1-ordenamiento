@@ -1,17 +1,64 @@
 import java.sql.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.List;
 
 import models.Estudiante;
 
 public class App {
   
     public static void main(String[] args) throws Exception {
-       //runEjemplosPrimitivos();
+       runEjemplosPrimitivos();
        runEjemplosObjetos();
        System.out.println("------------------------------------------------");
        runComparetors();
+       System.out.println("------------------------------------------------");
+       //runComparetorsObj();
+       runComparetorsObj2();
     }
+
+
+
+   
+
+
+
+    private static void runComparetorsObj2() {
+        Estudiante e1 = new Estudiante("Juan", 10);
+        Estudiante[] estudiantes = {e1,new Estudiante("Maria", 7),
+            new Estudiante("Diego", 3.5),
+            new Estudiante("Pedro", 6.8)
+        };
+
+        Comparator.naturalOrder();
+        Comparator.reverseOrder();
+        Comparator<Estudiante> compNota = Comparator.comparingDouble(e -> e.getNota());
+        
+        Arrays.sort(estudiantes, compNota);
+        for(int i = 0; i < estudiantes.length; i++){
+            System.out.println(estudiantes[i]);
+        }
+
+        List<Estudiante> estudiantesLista = new ArrayList<>(List.of(new Estudiante("Maria")));
+        
+    }
+
+    
+    private static void runComparetorsObj() {
+        List<Integer> numeros = new ArrayList<>(List.of(5,6,4,1,2,3));
+        numeros.sort(Comparator.naturalOrder());
+        numeros.sort(null);
+        System.out.println(numeros);
+
+        numeros.sort(Comparator.reverseOrder());
+        System.out.println(numeros);
+
+
+
+    }
+
+
 
 
 
@@ -109,4 +156,5 @@ public class App {
             System.out.println();
         }
     }
+
 }
