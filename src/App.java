@@ -16,9 +16,11 @@ public class App {
        System.out.println("------------------------------------------------");
        //runComparetorsObj();
        runComparetorsObj2();
+       Comparable comparable = new Comparable();
     }
 
 
+    
 
    
 
@@ -39,9 +41,7 @@ public class App {
         for(int i = 0; i < estudiantes.length; i++){
             System.out.println(estudiantes[i]);
         }
-        List<Estudiante> estudiantesLista = new ArrayList<>(List.of(new Estudiante("Maria")));
-        //List<Estudiante> estudiantesLista = new ArrayList<>(List.of(new Estudiante("Maria")));
-        
+      
     }
 
     
